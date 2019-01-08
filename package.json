@@ -1,0 +1,92 @@
+{
+  "name": "firmino",
+  "productName": "Firmino",
+  "version": "1.1.26",
+  "description": "Utility per la gestione della libreria personale e dei prestiti",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --cache --color --ext .jsx,.js src"
+  },
+  "keywords": [],
+  "author": "francesco",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [],
+        "linux": [
+          "deb"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm",
+        "icon": "src/Assets/icon.svg"
+      },
+      "electronWinstallerConfig": {
+        "name": "Firmino",
+        "icon": "src/Assets/icon.ico"
+      },
+      "electronInstallerDebian": {
+        "icon": "src/Assets/icon.svg",
+        "categories": [
+          "Utility"
+        ]
+      },
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "mastro-elfo",
+        "name": "firmino"
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "Firmino"
+      }
+    }
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.8.1",
+    "@material-ui/icons": "^3.0.1",
+    "@material-ui/lab": "^3.0.0-alpha.27",
+    "autosuggest-highlight": "^3.1.1",
+    "beautify-isbn": "^2.2.0",
+    "classnames": "^2.2.6",
+    "downshift": "^3.1.8",
+    "electron-compile": "^6.4.4",
+    "electron-devtools-installer": "^2.1.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "fs-extra": "^7.0.1",
+    "lodash": "^4.17.11",
+    "notistack": "^0.4.1",
+    "prefix-si": "^1.2.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-hot-loader": "^4.6.3",
+    "react-router-dom": "^4.3.1",
+    "rwlock": "^5.0.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.3",
+    "electron-prebuilt-compile": "3.0.10",
+    "eslint": "^3",
+    "eslint-config-airbnb": "^15",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jsx-a11y": "^5",
+    "eslint-plugin-react": "^7.12.2"
+  }
+}
